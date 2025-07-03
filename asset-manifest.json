@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.js": "/harborview-hotel/static/js/main.e2f23895.js",
+    "static/media/HotelExterior.jpg": "/harborview-hotel/static/media/HotelExterior.411e6359cc924de1821b.jpg",
+    "static/media/ElegantLobby.jpg": "/harborview-hotel/static/media/ElegantLobby.763da2c6b395fb2d206e.jpg",
+    "static/media/seaview.jpg": "/harborview-hotel/static/media/seaview.fe9a93f15bdd082e22bb.jpg",
+    "static/media/searoom.jpg": "/harborview-hotel/static/media/searoom.cfae1f2118ec54d0e3e2.jpg",
+    "static/media/ocean.jpg": "/harborview-hotel/static/media/ocean.a7be673c30670db480f5.jpg",
+    "static/media/pool.jpg": "/harborview-hotel/static/media/pool.1d8a5409e57a10be9a5f.jpg",
+    "static/media/queenroom.jpg": "/harborview-hotel/static/media/queenroom.9c3dd8e74e84833d6d0a.jpg",
+    "static/media/kingroom.jpg": "/harborview-hotel/static/media/kingroom.312de2e5531cb84e5457.jpg",
+    "index.html": "/harborview-hotel/index.html",
+    "main.e2f23895.js.map": "/harborview-hotel/static/js/main.e2f23895.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.e2f23895.js"
+  ]
+}
