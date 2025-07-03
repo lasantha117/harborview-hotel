@@ -1,0 +1,177 @@
+/* Specific styles for the redesigned luxury Home page */
+
+/* --- Typography & Color Palette --- */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@300;400&display=swap');
+
+:root {
+    --font-serif: 'Playfair Display', serif;
+    --font-sans: 'Lato', sans-serif;
+    --color-dark-text: #3a3a3a;
+    --color-gold-accent: #c9b38c;
+    --color-light-bg: #f9f9f9;
+}
+
+/* --- Hero Section --- */
+.home-hero {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.home-hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3); /* Dark overlay for text readability */
+}
+
+.hero-content {
+    z-index: 2;
+    position: relative;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-family: var(--font-serif);
+    font-size: clamp(2.5rem, 5vw, 4.5rem); /* Responsive font size */
+    font-weight: 700;
+    color: white;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+}
+
+.hero-content p {
+    font-family: var(--font-sans);
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    font-weight: 300;
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+}
+
+.hero-content .btn {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 14px 32px;
+    font-weight: 400;
+    transition: all 0.3s ease;
+}
+
+.hero-content .btn:hover {
+    background-color: white;
+    color: var(--color-dark-text);
+    transform: translateY(-3px);
+}
+
+/* --- Experience Section --- */
+.experience-section {
+    padding: 100px 20px;
+    text-align: center;
+    background-color: var(--color-light-bg);
+}
+
+.experience-section h2 {
+    font-family: var(--font-serif);
+    font-size: 2.5rem;
+    color: var(--color-dark-text);
+    margin-bottom: 1rem;
+}
+
+.experience-section .subtitle {
+    font-family: var(--font-sans);
+    font-size: 1.1rem;
+    color: var(--color-gold-accent);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
+}
+
+.experience-section p {
+    font-family: var(--font-sans);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #666;
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+/* --- Feature Section (Alternating Layout) --- */
+.feature-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 3rem;
+    padding: 100px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Reverse order for every second feature section */
+.feature-section:nth-child(odd) {
+    direction: rtl; /* Reverses the grid column order */
+}
+.feature-section:nth-child(odd) .feature-content {
+    direction: ltr; /* Resets text direction for content */
+}
+
+.feature-image {
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.feature-content {
+    padding: 2rem;
+}
+
+.feature-content h3 {
+    font-family: var(--font-serif);
+    font-size: 2.2rem;
+    color: var(--color-dark-text);
+    margin-bottom: 1.5rem;
+}
+
+.feature-content p {
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.feature-content .btn {
+    background-color: var(--color-gold-accent);
+    color: white;
+    border: none;
+}
+
+.feature-content .btn:hover {
+    background-color: #b39c74;
+    transform: translateY(-2px);
+}
+
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 900px) {
+    .feature-section,
+    .feature-section:nth-child(odd) {
+        grid-template-columns: 1fr;
+        direction: ltr; /* Reset direction for mobile */
+        padding: 60px 20px;
+    }
+    .feature-image {
+        height: 350px;
+    }
+}
